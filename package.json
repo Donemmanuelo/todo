@@ -24,9 +24,14 @@
     "db:studio": "pnpm --filter web db:studio",
     "test": "pnpm -r test"
   },
+   "Dependencies": {
+       "next": "^14.2.13",
+},
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "typescript": "^5.3.3",
-    "next": "^14.2.13"
-  }
+    "typescript": "^5.3.3"}, 
+   "engines": {
+    "node": "20.x",
+    "pnpm": "8.x"   
+  } 
 }
