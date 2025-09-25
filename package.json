@@ -24,8 +24,8 @@
     "db:studio": "pnpm --filter web db:studio",
     "test": "pnpm -r test"
   },
-   "dependencies": {
-       "next": "^14.2.13",
+  "dependencies": {
+      "next": "^14.2.13"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
