@@ -635,4 +635,3 @@ const TaskSwapScript = () => {
   );
 };
 
-export { TaskSwapScript };

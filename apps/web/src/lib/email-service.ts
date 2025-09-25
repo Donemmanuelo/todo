@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import type { SendMailOptions } from 'nodemailer';
 import { prisma } from './db';
 import { Task } from '@prisma/client';
 
@@ -278,12 +279,12 @@ export class EmailService {
 </html>
       `;
 
-      const mailOptions = {
+      const mailOptions: SendMailOptions = {
         from: process.env.SMTP_FROM || '"Smart To-Do" <noreply@smarttodo.app>',
         to: userEmail,
         subject: subjects[type],
         html: htmlContent,
-        priority: type === 'overdue' ? 'high' : 'normal',
+        priority: (type === 'overdue' ? 'high' : 'normal'),
       };
 
       const info = await this.transporter.sendMail(mailOptions);

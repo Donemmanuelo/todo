@@ -1,3 +1,11 @@
+// Local definition compatible with the Web Notifications API
+// Avoids depending on lib.serviceworker types
+export interface NotificationAction {
+  action: string;
+  title: string;
+  icon?: string;
+}
+
 export interface NotificationOptions {
   title: string;
   body: string;

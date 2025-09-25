@@ -40,9 +40,8 @@ export const {
     maxAge: 30 * 24 * 60 * 60, // 30 days
     updateAge: 24 * 60 * 60, // 24 hours
   },
-  // Allow linking OAuth accounts by email in development to avoid OAuthAccountNotLinked during local testing.
-  // DO NOT enable this in production.
-  allowDangerousEmailAccountLinking: process.env.NODE_ENV !== 'production',
+  // Note: allowDangerousEmailAccountLinking is not supported in this NextAuth version's types.
+  // If you need to link accounts by email during development, handle it via callbacks or manual flows.
   callbacks: {
     async jwt({ token, account, user }) {
       if (account && user) {
