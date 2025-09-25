@@ -1,0 +1,30 @@
+{
+  "name": "desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "electron .",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "electron": "^25.8.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.6.4"
+  },
+  "build": {
+    "appId": "com.smarttodo.app",
+    "productName": "Smart To-Do",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js"
+    ]
+  }
+}

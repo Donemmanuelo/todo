@@ -1,0 +1,31 @@
+{
+  "name": "smart-todo-app",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:desktop": "pnpm --filter desktop dev",
+    "dev:mobile": "pnpm --filter mobile start",
+    "build": "pnpm --filter web build",
+    "build:desktop": "pnpm --filter desktop build",
+    "build:mobile": "pnpm --filter mobile build",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check",
+    "docker:up": "docker-compose up -d postgres redis",
+    "docker:down": "docker-compose down",
+    "db:migrate": "pnpm --filter web db:migrate",
+    "db:seed": "pnpm --filter web db:seed",
+    "db:studio": "pnpm --filter web db:studio",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}
