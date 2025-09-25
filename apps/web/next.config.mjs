@@ -8,6 +8,8 @@ const nextConfig = {
     config.resolve = config.resolve || {};
     config.resolve.alias = config.resolve.alias || {};
     config.resolve.alias['@'] = path.resolve(process.cwd(), 'src');
+    // Explicit alias for the auth module to avoid path resolution issues
+    config.resolve.alias['@/auth'] = path.resolve(process.cwd(), 'src/auth.ts');
     return config;
   },
 };
