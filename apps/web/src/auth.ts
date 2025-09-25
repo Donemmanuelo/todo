@@ -74,7 +74,8 @@ export const {
   adapter: PrismaAdapter(prisma),
   // Use JWT sessions for simplicity on serverless. If you prefer DB sessions, change to "database".
   session: { strategy: "jwt" },
-  secret: process.env.NEXTAUTH_SECRET,
+  // Support either AUTH_SECRET (Auth.js v5) or NEXTAUTH_SECRET (legacy)
+  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
   trustHost: true,
   providers,
   // Add any pages overrides if you have custom pages in src/app/auth/*
