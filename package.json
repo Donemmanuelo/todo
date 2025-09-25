@@ -24,7 +24,7 @@
     "db:studio": "pnpm --filter web db:studio",
     "test": "pnpm -r test"
   },
-   "Dependencies": {
+   "dependencies": {
        "next": "^14.2.13",
 },
   "devDependencies": {
