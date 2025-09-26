@@ -1,6 +1,7 @@
 {
   "installCommand": "corepack enable && corepack prepare pnpm@8.15.4 --activate && corepack pnpm install -w",
   "buildCommand": "corepack pnpm --filter web build",
+  "outputDirectory": "apps/web/.next",
   "crons": [
     {
       "path": "/api/cron/daily-report",
