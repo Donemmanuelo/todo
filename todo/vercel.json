@@ -1,0 +1,10 @@
+{
+  "installCommand": "corepack enable && corepack prepare pnpm@8.15.4 --activate && pnpm install -w",
+  "buildCommand": "pnpm --filter web build",
+  "crons": [
+    {
+      "path": "/api/cron/daily-report",
+      "schedule": "0 22 * * *"
+    }
+  ]
+}

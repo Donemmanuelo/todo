@@ -7,6 +7,8 @@ const __dirname = path.dirname(__filename);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Ensure we do a server build, not a static export, to support NextAuth and server features
+  output: 'standalone',
   webpack: (config) => {
     // Ensure "@" alias points to the app's src directory (resolve relative to this config file)
     config.resolve = config.resolve || {};

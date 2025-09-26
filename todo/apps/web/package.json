@@ -14,8 +14,7 @@
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
-    "@auth/core": "^0.40.0",
-    "@auth/prisma-adapter": "^1.0.12",
+    "@auth/prisma-adapter": "1.0.12",
     "@google-cloud/local-auth": "^3.0.1",
     "@keycloak/keycloak-admin-client": "^26.3.4",
     "@microsoft/microsoft-graph-client": "^3.0.7",
