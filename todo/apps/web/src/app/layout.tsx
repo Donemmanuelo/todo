@@ -1,6 +1,13 @@
 import { Metadata } from 'next';
 import './globals.css';
 
+// Force dynamic rendering (SSR) to avoid static prerender of special routes like /404 and /500 during build
+export const dynamic = 'force-dynamic';
+// Fully disable static generation and caching to avoid Pages runtime during build
+export const revalidate = 0;
+export const fetchCache = 'force-no-store';
+export const runtime = 'nodejs';
+
 export const metadata: Metadata = {
   title: 'Smart To-Do',
   description: 'Email-driven task management with intelligent scheduling',
